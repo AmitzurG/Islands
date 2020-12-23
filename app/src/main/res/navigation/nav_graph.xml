@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/StartFragment">
+
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="com.example.islands.StartFragment"
+        android:label="@string/startFragmentLabel"
+        tools:layout="@layout/fragment_start">
+
+        <action
+            android:id="@+id/action_StartFragment_to_PixelsFragment"
+            app:destination="@id/PixelsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/PixelsFragment"
+        android:name="com.example.islands.PixelsFragment"
+        android:label="@string/pixelsFragmentLabel"
+        tools:layout="@layout/fragment_pixels">
+        <action
+            android:id="@+id/action_PixelsFragment_to_islandsFragment"
+            app:destination="@id/islandsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="gridHeight"
+            app:argType="integer"
+            android:defaultValue="50" />
+        <argument
+            android:name="gridWidth"
+            app:argType="integer"
+            android:defaultValue="50" />
+    </fragment>
+    <fragment
+        android:id="@+id/islandsFragment"
+        android:name="com.example.islands.IslandsFragment"
+        android:label="IslandsFragment" >
+        <action
+            android:id="@+id/action_islandsFragment_to_StartFragment"
+            app:destination="@id/StartFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:launchSingleTop="true" app:popUpTo="@id/StartFragment"/>
+    </fragment>
+</navigation>

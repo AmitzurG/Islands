@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Islands</string>
+    <string name="startFragmentLabel">Start</string>
+    <string name="pixelsFragmentLabel">Pixels</string>
+    <string name="islandsFragmentLabel">Islands</string>
+
+    <string name="insertGridSize">Please insert grid size</string>
+    <string name="foundIslands">Found %1$d islands</string>
+    <string name="pixelsGrid">Pixels grid</string>
+    <string name="islandsGrid">Islands grid</string>
+    <string name="comma">,</string>
+    <string name="go">Go</string>
+    <string name="solve">Solve</string>
+    <string name="restart">Restart</string>
+    <string name="heightWidthNoGreater1">Grid height and width have to be greater than 1.</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+</resources>

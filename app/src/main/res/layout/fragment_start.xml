@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartFragment">
+
+    <TextView
+        android:id="@+id/insertSizeTextView"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center"
+        android:text="@string/insertGridSize" android:textAppearance="?android:attr/textAppearanceLarge"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.30" />
+
+    <EditText
+        android:id="@+id/gridHeightEditText"
+        android:layout_width="@dimen/gridSizeEditTextWidth" android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp" android:layout_marginTop="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" android:lines="1"
+        android:maxLength="4" android:inputType="number" android:importantForAutofill="no"
+        android:imeOptions="actionNext"
+        app:layout_constraintEnd_toStartOf="@id/commaTextView"
+        app:layout_constraintTop_toBottomOf="@id/insertSizeTextView"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/commaTextView"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/comma"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertSizeTextView" />
+
+    <EditText
+        android:id="@+id/gridWidthEditText"
+        android:layout_width="@dimen/gridSizeEditTextWidth" android:layout_height="wrap_content"
+        android:layout_marginStart="16dp" android:layout_marginTop="8dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" android:lines="1"
+        android:maxLength="4" android:inputType="number" android:importantForAutofill="no"
+        android:imeOptions="actionDone"
+        app:layout_constraintStart_toEndOf="@id/commaTextView"
+        app:layout_constraintTop_toBottomOf="@id/insertSizeTextView"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go" android:textAppearance="?android:attr/textAppearanceMedium"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

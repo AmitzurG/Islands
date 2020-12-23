@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="gridSizeEditTextWidth">60dp</dimen>
+    <dimen name="gridSize">350dp</dimen>
+</resources>
